@@ -1,0 +1,72 @@
+@media(max-width:630px) {
+    /*############# HEADER #############*/
+    .sections_title{
+        font-size: 1.8rem;
+    }
+
+    .menu {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 10vh;
+        line-height: 80px;
+        right: 0;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.347);
+        height: 0;
+        transition: .6s ease-in-out;
+        z-index: 1000;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+
+    .nav.active .menu {
+        display: block;
+        height: calc(100vh - 10vh);
+        /* obs: se por img no logo tenho que alterar*/
+        visibility: visible;
+        overflow-y: auto;
+    }
+
+    .nav.active #menu_hamburguer .one {
+        transform: rotate(225deg) translate(-7px, -6px);
+        transition: all .5s;
+    }
+
+    .nav.active #menu_hamburguer .two {
+        opacity: 0;
+        transition: all .5s;
+    }
+
+    .nav.active #menu_hamburguer .three {
+        transform: rotate(-225deg) translate(-6px, 7px);
+        transition: all .5s;
+    }
+
+    .menu a {
+        font-size: 1.8rem;
+    }
+
+    .menu #li {
+        padding-top: 70px;
+    }
+
+    #menu_hamburguer {
+        display: block;
+        cursor: pointer;
+        padding: 3px;
+        width: 45px;
+
+    }
+
+    .one,
+    .two,
+    .three {
+        width: 100%;
+        background-color: rgb(203, 191, 191);
+        height: 4px;
+        display: flex;
+        margin: 5px 0;
+
+    }
+}
